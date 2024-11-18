@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>GIẢI PHƯƠNG TRÌNH BẬC 1</h2>
+      <label for="a"
+        ><input type="number" name="a" id="hs_a" placeholder="Hệ số a" value=""
+      /></label>
+      <br />
+      <label for="b"
+        ><input type="number" name="b" id="hs_b" placeholder="Hệ số b" value=""
+      /></label>
+      <br />
+      <button type="button">Giải Phương Trình</button>
+      <p id="result">KẾT QUẢ</p>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          let a = $("#hs_a").val();
+          let b = $("#hs_b").val();
+          if (a == 0) {
+            if (b == 0) {
+              $("#result").text("Phương trình có vô số nghiệm");
+            } else {
+              $("#result").text("Phương trình vô nghiệm");
+            }
+          } else {
+            let x = -b / a;
+            $("#result").text("Nghiệm của phương trình là: " + x);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
